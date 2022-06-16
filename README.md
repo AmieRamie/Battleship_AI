@@ -1,10 +1,11 @@
 # **Deep Reinforcement Learning to Train an AI to Play Battleship Salvo**
 
-**CS4100 Final Project**
-
 **by. Amrit Ramesh**
 
+A version with example pictures is in the PDF
+
 **Introduction**
+
 
 Our group wanted to design an AI that would be able to play a version of Battleship called _Salvo._ In this version, the number of shots you have per turn is dependent on the number of ships you have. So in a game with 3 ships, you get 3 shots to hit your opponent every turn until your opponent sinks one of your ships after which you have 2 shots per turn. We initially wanted to incorporate all elements of the Salvo edition in our training of the AI, but after some thought we realized that we would need to have another player in order to make the number of shots mechanism work. More specifically, if both opponents have three ships we would have needed to simulate an opponent such that when the opponent sinks a ship the AI gets one less shot. Now we could have done this using a random shot creator, but we believed, that since a person&#39;s decision making in battleship is largely independent of the moves an opponent makes (you shoot at coordinates based on what you have done in the past not what your opponent has done) that simulating an opponent in order to incorporate the shot decrementation would add minimal value in training the behaviours and strategies of the AI. Therefore we instead decided to play the Salvo variation where regardless of what moves the opponent makes the AI will always have a consistent number of shots \&gt;1 that is never decrementing. This also has the added side benefit of reducing the complexity of training the AI. The variation where at each turn the AI has n (\&gt;1) moves, already increases the complexity of the state actions space at an exponential rate (based on n). So if we were to include the mechanic where there would be a decrementing shot amount we would have the added complexity of needing to train the AI to consider that it may have fewer shots in the future (not to mention the added complexity of needing a random opponent to play in every game simulation). We thought this required significantly more work and computation than what it was worth in the value add it would create for the AI.
 
