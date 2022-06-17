@@ -1,6 +1,7 @@
 # **Deep Reinforcement Learning to Train an AI to Play Battleship Salvo**
 
 **by. Amrit Ramesh**
+
 If you want the example pictures please look at the PDF version
 
 **Introduction**
